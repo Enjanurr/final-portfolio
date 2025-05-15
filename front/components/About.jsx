@@ -11,6 +11,24 @@ import {
   Briefcase,
   University,
 } from 'lucide-react';
+import { FaHtml5, FaJs, FaNodeJs, FaCss3 } from 'react-icons/fa';
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiDjango,
+  SiFlask,
+  SiGit,
+  SiGithub,
+  SiExpress,
+  SiMongodb,
+  SiPython,
+} from 'react-icons/si';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 const infoData = [
   {
@@ -39,7 +57,7 @@ const infoData = [
   },
 ];
 
-const qualificationData = [ 
+const qualificationData = [
   {
     title: 'Education',
     data: [
@@ -70,7 +88,7 @@ const qualificationData = [
       },
       {
         Company: 'Ai Pilipinas',
-        role: 'Front-end Website developer',
+        role: 'Full-stack developer',
         years: '2024 - 2025',
       },
       {
@@ -104,16 +122,56 @@ const skillData = [
     title: 'tools',
     data: [
       {
-        imgPath: '/about/vscode.svg',
+        tool: <FaHtml5 size={50} />,
+        name: 'HTML',
       },
       {
-        imgPath: '/about/figma.svg',
+        tool: <FaJs size={50} />,
+        name: 'Javascript',
       },
       {
-        imgPath: '/about/notion.svg',
+        tool: <FaNodeJs size={50} />,
+        name: 'Node.js',
       },
       {
-        imgPath: '/about/wordpress.svg',
+        tool: <FaCss3 size={50} />,
+        name: 'CSS',
+      },
+      {
+        tool: <SiTailwindcss size={50} />,
+        name: 'Tailwind CSS',
+      },
+      {
+        tool: <SiNextdotjs size={50} />,
+        name: 'Next.js',
+      },
+      {
+        tool: <SiDjango size={50} />,
+        name: 'Django',
+      },
+      {
+        tool: <SiFlask size={50} />,
+        name: 'Flask',
+      },
+      {
+        tool: <SiGit size={50} />,
+        name: 'Git',
+      },
+      {
+        tool: <SiGithub size={50} />,
+        name: 'Github',
+      },
+      {
+        tool: <SiExpress size={50} />,
+        name: 'Express.js',
+      },
+      {
+        tool: <SiMongodb size={50} />,
+        name: 'Monggo ',
+      },
+      {
+        tool: <SiPython size={50} />,
+        name: 'Python',
       },
     ],
   },
@@ -126,59 +184,64 @@ const About = () => {
   };
 
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-24 ">
-      <div className="containter mx-auto">
+    <section className="xl:h-[1050px] pb-12 xl:py-24">
+      <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mt-16 text-center mx-auto">
           About Me
         </h2>
-        <div className="flex flex-col xl:flex-row">
-          {/*image*/}
-          <div className="hidden xl:flex flex-1 relative">
-            <DevImg
-              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px]
-             h-[505px] bg-no-repeat relative"
-              imgSrc="/about/developer.png"
-            />
+        <div className="flex flex-col xl:flex-row gap-x-8">
+          {/* image */}
+          <div className="hidden xl:block flex-1">
+            <div className="relative">
+              <div className="sticky top-0 bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat bg-cover bg-center">
+                <DevImg
+                  containerStyles="w-full h-full relative bottom-2.5 bg-no-repeat"
+                  imgSrc="/about/dev4.png"
+                />
+              </div>
+            </div>
           </div>
 
-          {/*tabs this is the button*/}
-          {/* value resonates with the tab button and the tab content*/}
+          {/* tabs */}
           <div className="flex-1">
+            
             <Tabs defaultValue="personal">
-              <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none ">
+              <div className='flex align-center justify-center'>
+              <TabsList className="w-full grid grid-cols-3 max-w-[520px] border dark:border-none">
                 <TabsTrigger value="personal">Personal Info</TabsTrigger>
-                <TabsTrigger value="qualifications">Qualications</TabsTrigger>
+                <TabsTrigger value="qualifications">Qualifications</TabsTrigger>
                 <TabsTrigger value="skills">Skills</TabsTrigger>
               </TabsList>
 
-              {/*tabs content*/}
-              <div className="text-lg mt-12 xl:mt-8">
-                {/*personal*/}
+              </div>
+              {/* tabs content */}
+              <div className="text-lg mt-12 xl:mt-8 " >
+              <div className="h-[500px] overflow-y-auto p-4 border border-primary rounded ">
+                {/* Your existing TabsContent components remain unchanged */}
+                {/* Personal Tab */}
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
-                    <h3 className="h3 mb-4">Unmatched Service </h3>
+                    <h3 className="h3 mb-4">Unmatched Service</h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
                       Specializing in creating websites with cutting-edge
                       technology, delivering modern, high-performance web
                       solutions.
                     </p>
-                    {/* icons */}
-                    <div className="grid xl:grid-cols-2 gap-4 mb-12 ">
-                      {/* make a for loop like the loop in django but in this case use a map since its next js */}
-                      {infoData.map((item, index) => {
-                        return (
-                          <div
-                            className="flex items-center gap-x-4 mx-auto xl:mx-0"
-                            key={index}
-                          >
-                            <div className="text-primary">{item.icon}</div>
-                            <div>{item.text}</div>
-                          </div>
-                        );
-                      })}
+                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                      {infoData.map((item, index) => (
+                        <div
+                          className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                          key={index}
+                        >
+                          <div className="text-primary">{item.icon}</div>
+                          <div>{item.text}</div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </TabsContent>
+
+                {/* Qualifications Tab */}
                 <TabsContent value="qualifications">
                   <div>
                     <h3 className="h3 mb-8 text-center xl:text-left">
@@ -279,57 +342,54 @@ const About = () => {
                     </div>
                   </div>
                 </TabsContent>
-                <TabsContent value="skills">
-                  <div className="text-center xl:text-left ">
-                    <h3 className="h3 mb-8">Tools I use</h3>
-                    <div className="mb-16">
-                      <h4 className="text-xl font-semibold mb-2">Skills</h4>
-                      <div className="border-b border-border mb-4"></div>
-                      {/*skill set */}
-                      <div>
-                        {getData(skillData, 'skills').data.map(
-                          (item, index) => {
-                            const { name } = item;
 
-                            return (
-                              <div
-                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
-                                key={index}
-                              >
-                                <div className="font-medium">{name}</div>
-                              </div>
-                            );
-                          }
-                        )}
-                      </div>
-                    </div>
-                    {/**toolss */}
-                    <div>
-                      <h4 className="text-xl font-semibold mb-2 xl:text-left">
-                        Tools
-                      </h4>
-                      <div className="border-b border-border mb-4"></div>
+                {/* Skills Tab */}
+              <TabsContent value="skills">
+  <div className="text-center xl:text-left">
+    <h3 className="h3 mb-8">Tools I use</h3>
+    
+    {/* Skills Section */}
+    <div className="mb-12">
+      <h4 className="text-xl font-semibold mb-4">Skills</h4>
+      <div className="h-px bg-border w-full mb-4" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto xl:mx-0">
+        {getData(skillData, 'skills').data.map((skill, index) => (
+          <div
+            key={index}
+            className="p-4 bg-transparent hover:bg-accent/50 rounded-lg transition-colors"
+          >
+            <span className="font-medium">{skill.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
 
-                      {/* tools list */}
-                      <div className='flex gap-x-8 justify-center xl:justify-start'>
-                        {getData(skillData, 'tools').data.map((item, index) => {
-                          const { imgPath } = item;
-                          return (
-                            <div key={index}>
-                              <Image
-                                src={imgPath}
-                                width={48}
-                                height={48}
-                                alt=""
-                                priority
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
+    {/* Tools Section - Updated with full-width grid */}
+    <div className="space-y-4">
+      <h4 className="text-xl font-semibold">Tools</h4>
+      <div className="h-px bg-border w-full" />
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 w-full">
+        {getData(skillData, 'tools').data.map((item, index) => (
+          <TooltipProvider key={index} delayDuration={100}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="aspect-square w-full rounded-lg flex items-center justify-center hover:bg-accent/50 transition-all duration-300 group">
+                  <div className="text-primary text-4xl group-hover:text-secondary dark:text-white dark:group-hover:text-orange-500 transition-colors duration-300">
+                    {item.tool}
                   </div>
-                </TabsContent>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{item.name}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ))}
+      </div>
+    </div>
+  </div>
+</TabsContent>
+              </div>
               </div>
             </Tabs>
           </div>
