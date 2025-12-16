@@ -6,11 +6,11 @@ import Cta from '@/components/Cta';
 // This is the main page
 export default function Home() {
   return (
-    <main>
+   <main>
       <Hero />
-      <About />
       <Services />
       <Work />
+      <About />
       <Cta />
     </main>
   );

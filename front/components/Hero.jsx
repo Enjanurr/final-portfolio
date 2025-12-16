@@ -27,12 +27,13 @@ const Hero = () => {
             </div>
             <h1 className="h1 mb-4">Hello, my name is Enjanurr</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              I am a budding web developer passionate about creating functional
-              and dynamic websites. I have hands-on experience building a
-              website using Django and am now exploring the MERN stack to expand
-              my skill set. While I’m still early in my journey, I’m committed
-              to continuous learning and excited to tackle new challenges in web
-              development
+            I am a budding web developer
+             passionate about creating functional
+              and dynamic websites. I have hands-on experience
+               building a website using Django and am now exploring 
+               the MERN stack to expand my skill set. While I’m still
+                early in my journey, I’m committed to continuous 
+                learning and excited to tackle new challenges in web development
             </p>
             {/*buttons from the ui , shadcn ui */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -67,18 +68,20 @@ const Hero = () => {
               endCountNum={3}
               badgeText="Finished Projects"
             />
-            {/* badge 3 */}
-            <Badge
+               {/* badge 3 */}
+               <Badge
               containerStyles="absolute top-[55%] -right-8"
               icon={<RiBriefcase4Fill />}
               endCountNum={3}
               badgeText="Happy clients"
             />
-            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[510px] h-[510px] bg-no-repeat absolute -top-1 -right-2">
-              <DevImg
-                containerStyles="w-full h-full bg-hero_shape relative bg-bottom bg-no-repeat"
-                imgSrc="/hero/user2.png"
-              />
+            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[510px] h-[499px] bg-no-repeat absolute top-5 -right-2">
+       <DevImg
+  containerStyles="bg-hero_shape w-full h-full bg-no-repeat relative bg-bottom [&>img]:translate-y-1"
+  imgSrc="/hero/user2.png"
+/>
+
+
             </div>
           </div>
         </div>

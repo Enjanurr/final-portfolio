@@ -6,33 +6,24 @@ import {
   RiFacebookFill,
   RiInstallFill,
 } from 'react-icons/ri';
+import { SiLeetcode } from 'react-icons/si';
 
 import Link from 'next/link';
 
 const icons = [
+ 
   {
-    path: '/',
-    name: <RiYoutubeFill />,
-  },
-  {
-    path: '/',
+    path: 'https://www.linkedin.com/in/johnru-bajenting-57880a342/',
     name: <RiLinkedinFill />,
   },
   {
-    path: '/',
+    path: 'https://github.com/Enjanurr',
     name: <RiGithubFill />,
   },
-  {
-    path: '/',
-    name: <RiInstallFill />,
-  },
-  {
-    path: '/',
-    name: <RiYoutubeFill />,
-  },
-  {
-    path: '/',
-    name: <RiFacebookFill />,
+  
+   {
+    path: 'https://leetcode.com/u/enjanurr/',
+    name: <SiLeetcode />,
   },
 ];
 

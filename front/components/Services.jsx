@@ -10,21 +10,21 @@ import {
 const servicesData = [
   {
     icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
-    title: 'Frontend development',
-    description:  
-      'I specialize in building responsive and interactive web interfaces that prioritize user experience. With expertise in HTML, CSS, JavaScript, and frameworks like React, I design and develop dynamic frontends tailored to your brand and audience. Whether it’s a landing page, portfolio site, or a single-page application, I deliver clean, modern, and accessible designs optimized for performance.',
+    title: 'Full-Stack Development',
+    description:
+      'I build end-to-end web and mobile applications with a strong backend-first approach. I focus on designing reliable APIs, handling authentication, and structuring application logic, while integrating clean and functional frontends using React, Next.js, or React Native. My goal is to deliver complete, maintainable systems where the frontend and backend work seamlessly together.',
   },
   {
     icon: <Blocks size={72} strokeWidth={0.8} />,
-    title: 'Backend development',
+    title: 'Backend Engineering',
     description:
-      'I develop secure, scalable, and efficient backend solutions to power your applications. Using technologies like Node.js, Express.js, and Django, I handle server-side logic, API development, authentication, and integration with databases like MongoDB and MySQL. My focus is on ensuring your application runs smoothly behind the scenes while supporting all your business requirements.',
+      'I specialize in developing secure and scalable backend systems using Django, Node.js, and Express. My work includes REST API design, authentication and authorization, database integration, and third-party API consumption, including AI services. I prioritize clear architecture, data integrity, and code that can grow with the application.',
   },
   {
     icon: <Gem size={72} strokeWidth={0.8} />,
-    title: 'Database management',
+    title: 'DevOps & Security (Learning)',
     description:
-      'I provide basic database setup and management services using MySQL and MongoDB. From creating tables or collections to performing CRUD operations, I can structure and maintain your project’s data needs efficiently. I’m continuously improving my skills to handle more complex database requirements',
+      'I am actively learning DevOps and cybersecurity fundamentals to understand how applications are deployed, monitored, and protected in production. This includes Linux environments, deployment pipelines, basic CI/CD workflows, containerization concepts, and security practices such as environment hardening, secrets management, and minimizing attack surfaces.',
   },
 ];
 

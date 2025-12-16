@@ -104,18 +104,27 @@ const skillData = [
   {
     title: 'skills',
     data: [
-      {
-        name: 'HTML , CSS',
-      },
-      {
-        name: 'Front-end Developer',
-      },
-      {
-        name: 'DJANGO, NEXT.JS , JAVASCRIPT, PYTHON, C',
-      },
-      {
-        name: 'Back-end Developer',
-      },
+        {
+      name: 'Backend & Full-Stack ',
+    },
+     {
+      name: 'Django, Node.js, Next.js (App Router)',
+    },
+       {
+      name: 'JavaScript, Python, SQL, C',
+       },
+       {
+      name: 'Authentication & API Design (JWT, OAuth, RBAC)',
+    },
+    {
+      name: 'DevOps Fundamentals (CI/CD, Docker, Deployment)',
+    },
+    {
+      name: 'Security Basics (API security, auth hardening)',
+    },
+    {
+      name: 'AI Integration (LLM APIs, system pipelines)',
+    }
     ],
   },
   {
