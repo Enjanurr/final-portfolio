@@ -3,6 +3,7 @@ import About from '@/components/About';
 import Services from '@/components/Services';
 import Work from '@/components/Work';
 import Cta from '@/components/Cta';
+
 // This is the main page
 export default function Home() {
   return (

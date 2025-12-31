@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 // A template.jsx file is generally used to define a common structure 
 // or layout that multiple pages can share, similar to layout.jsx
 //hooks
+
 import useScrollProgress from '@/hooks/useScrollProgress';
 
 //variants
